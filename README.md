@@ -23,7 +23,7 @@ Clone the repository using the command: git clone https://github.com/Zeegaths/De
 Change directory to your project file: cd projectname
 Install all dependencies: npm install
 Compile the contract using Hardhat: npx hardhat compile
-Run the deployment script: npx hardhat run scripts/deploy.js —-network fuji
+Run the deployment script: npx hardhat run scripts/deploy.js --network fuji
 Verify the contract on snowtrace: npx hardhat verify --network fuji contract address
 Interact with the deployed contract through transactions such as transfers, minting, and burning.
 
