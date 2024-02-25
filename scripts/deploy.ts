@@ -1,13 +1,15 @@
-import { ethers } from "hardhat";
+
+const hre = require("hardhat");
 
 async function main() {
 
-  const degenGame = await ethers.deployContract("DegenGame");
 
-  await degenGame.waitForDeployment();
+  const DegenStore = await hre.ethers.deployContract("DegenStore");
+
+  await DegenStore.waitForDeployment();
 
   console.log(
-    `DegenGame was deployed to ${degenGame.target}`
+    `Degentokens  deployed to ${DegenStore.target}`
   );
 }
 
@@ -16,4 +18,4 @@ async function main() {
 main().catch((error) => {
   console.error(error);
   process.exitCode = 1;
-}
+});
